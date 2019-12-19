@@ -1,17 +1,20 @@
 var fs = require('fs');
 
 /*Sync*/
+    console.log('Sync way');
     // sync way to add dir 
-    fs.mkdirSync('Stuff', function(){
-        console.log('Directory made');
-    });
-    // sync way to remove dir 
-    fs.rmdirSync('Stuff', function(){
+    /* fs.mkdirSync('Stuff', function(){
         console.log('Directory made');
     }); 
 
+    // sync way to remove dir 
+    fs.rmdirSync('Stuff', function(){
+        console.log('Directory made');
+    });  */
+
 
 /*Async*/
+    console.log('\nAync way');
     // async way to make a dir (with a file 'message.txt' inside)
     fs.mkdir('stuff', function(){
         fs.readFile('readme.txt', 'utf8', function(err, data){
@@ -21,7 +24,8 @@ var fs = require('fs');
         })
     })
 
+
     // delete a dir (include the file inside)
     fs.unlink('./stuff/readme.txt', function(){
         fs.rmdir('./stuff', function(){});
-    });
+    }); 
