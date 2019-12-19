@@ -1,1 +1,1 @@
-you read me beatch!
+you open the file and read the content!
