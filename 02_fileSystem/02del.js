@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-fs.unlink('readmeCopy2.txt', function(){
+fs.unlink('Copy-Of-message.txt', function(){
     console.log('file deleted');
 });
 
