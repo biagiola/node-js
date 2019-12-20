@@ -20,5 +20,4 @@ module.exports = {
     adder: adder,
     pi: pi
 }
-
 */
