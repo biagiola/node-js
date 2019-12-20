@@ -18,10 +18,12 @@ const server = http.createServer( (req, resp) => {
     }
 
     if (req.url === '/api/courses') {
-        resp.write('Holis qué tal?');
+        resp.write( JSON.stringify([1, 2, 3]) );
         resp.end();
     }
 });
 
 server.listen(3000);
 console.log('Listening on the port 3000');
+
+
